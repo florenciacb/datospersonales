@@ -2,15 +2,91 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mis Visualizaciones</title>
+  <title>Visualización de mis Pasos Diarios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #b766c4; /* violeta */
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #4db6ac; /* turquesa complementario */
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    img, .flourish-embed, #datawrapper-vis-cb1LN {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-  <h1>¿Cuál fue la variación anual de mis pasos diarios?</h1>
-<img src="img/pasosdiarios_calendarioanual.svg" alt="Visualización RawGraphs" style="max-width:100%; height:auto;">
-  <h1>¿Cómo fueron variando mis pasos diarios en cada mes?</h1>
-  <div class="flourish-embed" data-src="visualisation/24710967"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24710967/thumbnail" width="100%" alt="visualization" /></noscript></div>
-  <h1>¿Cuál fue la tendencia anual?</h1>
-  <div style="min-height:446px" id="datawrapper-vis-cb1LN"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/cb1LN/embed.js" charset="utf-8" data-target="#datawrapper-vis-cb1LN"></script><noscript><img src="https://datawrapper.dwcdn.net/cb1LN/full.png" alt="Pasos diarios a lo largo de un año (2024 - 2025) (Line chart)" /></noscript></div>
+  <header>
+    <h1>Visualización de mis Pasos Diarios</h1>
+    <p>Un análisis personal del 2024 - 2025</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Cuál fue la variación anual de mis pasos diarios?</h2>
+      <img src="img/pasosdiarios_calendarioanual.svg" alt="Visualización RawGraphs">
+    </section>
+
+    <section>
+      <h2>¿Cómo fueron variando mis pasos diarios en cada mes?</h2>
+      <div class="flourish-embed" data-src="visualisation/24710967">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/24710967/thumbnail" width="100%" alt="visualization" /></noscript>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Cuál fue la tendencia anual?</h2>
+      <div style="min-height:446px" id="datawrapper-vis-cb1LN">
+        <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/cb1LN/embed.js" charset="utf-8" data-target="#datawrapper-vis-cb1LN"></script>
+        <noscript><img src="https://datawrapper.dwcdn.net/cb1LN/full.png" alt="Pasos diarios a lo largo de un año (2024 - 2025)" /></noscript>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
