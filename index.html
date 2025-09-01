@@ -5,9 +5,9 @@
   <title>Visualización de mis Pasos Diarios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
- 
- 
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -47,16 +47,85 @@
 
     section h2 {
       margin-top: 0;
-      color: #4db6ac; 
+      margin-bottom: 1rem;
+      color: #4db6ac;
       font-size: 1.4rem;
       font-weight: 600;
+      text-align: center; /* centrados */
     }
 
-    img, .flourish-embed, #datawrapper-vis-cb1LN {
+    img, .flourish-embed, #datawrapper-vis-cb1LN, .tableauPlaceholder {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
       overflow: hidden;
+    }
+
+    /* Sección enfrentamiento */
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      gap: 2rem;
+    }
+
+    .contenedor img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    /* Índice */
+    nav {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 900px;
+    }
+
+    nav h2 {
+      text-align: center;
+      color: #4db6ac;
+      margin-bottom: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #4db6ac;
+    }
+
+    /* Lista justificada */
+    ol {
+      text-align: justify;
+      padding-left: 1.5rem;
+    }
+
+    ol li {
+      margin-bottom: 1rem; /* espacio entre ítems */
+    }
+
+    ol li strong {
+      font-weight: 600;
     }
   </style>
 </head>
@@ -65,49 +134,38 @@
     <h1>Visualización de mis Pasos Diarios</h1>
     <p>Un análisis personal del 2024 - 2025</p>
   </header>
- <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f9fafb;
-    }
 
-    h1 {
-      margin-bottom: 2rem;
-    }
+  <!-- Índice -->
+  <nav>
+    <h2>Índice</h2>
+    <ul>
+      <li><a href="#vs">Gangi vs. Buenos Aires</a></li>
+      <li><a href="#variacion">Variación anual</a></li>
+      <li><a href="#tendencia">Tendencia anual</a></li>
+      <li><a href="#mensual">Pasos mensuales</a></li>
+      <li><a href="#dias">Días de la semana</a></li>
+      <li><a href="#conclusiones">Conclusiones</a></li>
+    </ul>
+  </nav>
 
-    .contenedor {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-      gap: 2rem;
-    }
-
-    .contenedor img {
-      width: 100%;
-      max-width: 400px; /* ajustá el tamaño máximo a tu gusto */
-      border-radius: 8px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Gangi vs. Buenos Aires</h1>
-
-  <div class="contenedor">
-    <img src="img/gangi.jpg" alt="Foto de Gangi">
-    <img src="img/acassuso.jpg" alt="Foto de Acassuso">
-  </div>
   <main>
-    <section>
+    <!-- Gangi vs Buenos Aires -->
+    <section id="vs">
+      <h2>Gangi vs. Buenos Aires</h2>
+      <div class="contenedor">
+        <img src="img/gangi.jpg" alt="Foto de Gangi">
+        <img src="img/acassuso.jpg" alt="Foto de Acassuso">
+      </div>
+    </section>
+
+    <!-- Variación anual -->
+    <section id="variacion">
       <h2>¿Cuál fue la variación anual de mis pasos diarios?</h2>
       <img src="img/pasosdiarios_calendarioanual.svg" alt="Visualización RawGraphs">
     </section>
 
-    <section>
+    <!-- Tendencia anual -->
+    <section id="tendencia">
       <h2>¿Cuál fue la tendencia anual?</h2>
       <div style="min-height:446px" id="datawrapper-vis-cb1LN">
         <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/cb1LN/embed.js" charset="utf-8" data-target="#datawrapper-vis-cb1LN"></script>
@@ -115,19 +173,55 @@
       </div>
     </section>
 
-   </section>
-   <h2>¿Cómo variaron mis pasos mensualmente?</h2>
-    <div class='tableauPlaceholder' id='viz1756587306424' style='position: relative'>
-      <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP1_pasos_diarios&#47;Aos2024y2025&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TP1_pasos_diarios&#47;Aos2024y2025' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP1_pasos_diarios&#47;Aos2024y2025&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1756587306424');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-     </div>
-  </section>
-
+    <!-- Tableau mensual -->
+    <section id="mensual">
+      <h2>¿Cómo variaron mis pasos mensualmente?</h2>
+      <div class='tableauPlaceholder' id='viz1756587306424' style='position: relative'>
+        <noscript><a href='#'><img alt=' ' src='https://public.tableau.com/static/images/TP/TP1_pasos_diarios/Aos2024y2025/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='name' value='TP1_pasos_diarios/Aos2024y2025' />
+          <param name='tabs' value='yes' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/TP/TP1_pasos_diarios/Aos2024y2025/1.png' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1756587306424');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
     </section>
-   <h2>¿Qué día de la semana caminé más en 2024 y en 2025?</h2>
-   <div class="flourish-embed flourish-chart" data-src="visualisation/24901519"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24901519/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </section>
 
-   <h2>Conclusiones</h2>
-    <p>
+    <!-- Flourish días de semana -->
+    <section id="dias">
+      <h2>¿Qué día de la semana caminé más en 2024 y en 2025?</h2>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/24901519">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/24901519/thumbnail" width="100%" alt="chart visualization" /></noscript>
+      </div>
+    </section>
+
+    <!-- Conclusiones -->
+    <section id="conclusiones">
+      <h2>Conclusiones</h2>
+      <ol>
+        <li><strong>La cantidad de pasos diarios en Gangi es mayor que la de Buenos Aires.</strong>  
+          Esto puede deberse a diferentes motivos, por ejemplo, las distancias para llegar a una farmacia, supermercado, almacén o verdulería eran más extensas. Además, muchos de esos pasos se debieron al hecho de estar recorriendo y visitando lugares nuevos.</li>
+        
+        <li><strong>Los meses en los que más caminé fueron agosto, octubre 2024 y enero 2025.</strong>  
+          En esos meses aún me encontraba en Italia, por lo que mantenía alrededor de 200.000 pasos. No obstante, durante los meses señalados caminé aún más por estar viajando del pueblo a la ciudad.</li>
+        
+        <li><strong>La diferencia más notoria entre años fue en los domingos.</strong>  
+          Esto se podría explicar porque, sin importar si es Gangi o Buenos Aires, los fines de semana tiendo a caminar más. En Gangi, solía salir a caminar por la montaña todo el día o recorrer pueblos vecinos. En Buenos Aires, en cambio, los domingos los aprovecho más para estar en casa, limpiar y ordenar.</li>
+      </ol>
+    </section>
+  </main>
+</body>
   </main>
 </body>
